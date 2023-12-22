@@ -8,6 +8,7 @@
 2. Update a book
 3. Delete a book
 4. List all books
+5. RestfulAPI (not finished yet)
 [How to run]
 1. Open your webserver such as XAMPP, WAMPP, MAMP, LAMP, etc.
 2. Import the database in the folder "database" to your database server
