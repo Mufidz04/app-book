@@ -9,6 +9,8 @@
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: " hover:text-white" -->
               {{-- @dump(request() -> fullUrlIs('about')) --}}
+              
+              {{-- x-[components] merupakan pemanggilan component yang menunjukkan sebuah folder dan .link merujuk pada isian dari folder --}}
               <x-navbar.link href="/" >Home</x-navbar.link>
               <x-navbar.link href="/about">About</x-navbar.link>
               <x-navbar.link href="/contact">Contact</x-navbar.link>
@@ -37,6 +39,7 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+        {{-- x-[components] merupakan pemanggilan component yang menunjukkan sebuah folder dan .link merujuk pada isian dari folder --}} --}}
         <x-navbar.dropdown-item href="/">Home</x-navbar.dropdown-item>
         <x-navbar.dropdown-item href="/about">About</x-navbar.dropdown-item>
         <x-navbar.dropdown-item href="/contact">Contact</x-navbar.dropdown-item>
