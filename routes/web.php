@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn () => view('home'));
+Route::get('/', Controllers\HomeController::class);
 
-Route::get('/about', fn() => view('about'));
+Route::get('/about', [Controllers\AboutController::class, 'index']);
 
-Route::get('/contact', fn () => view('contact'));
+Route::get('/contact', [Controllers\ContactController::class, 'index']);
 
-Route::get('/galery', fn () => view('galery'));
+Route::get('/galery', [Controllers\GaleryController::class, 'index']);
 
-Route::get('users', function () {
-    $users = [
-        ['id' => 1, 'name' => 'Mufid', 'email' => 'mufidmutashim@gmai.com'],
-        ['id' => 2, 'name' => 'Salsa', 'email' => 'sarsabilla@gmail.com']
-    ];
-
-    return view('users.index', compact('users'));
-});
